@@ -1,0 +1,13 @@
+{
+  "name": "Valérian Vandercamme - Portfolio",
+  "short_name": "VV Portfolio",
+  "description": "Portfolio de Valérian Vandercamme, développeur .NET Full-Stack",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00ff88",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "categories": ["portfolio", "developer", "business"]
+}

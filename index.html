@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valérian Vandercamme - Développeur .NET Full-Stack</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Valérian Vandercamme, 21 ans, développeur .NET/Full-Stack passionné. Entrepreneur devenu dev, spécialisé en Azure, Blazor, et solutions enterprise.">
+    <meta name="keywords" content="développeur .NET, Full-Stack, Azure, Blazor, C#, développeur junior, portfolio">
+    <meta name="author" content="Valérian Vandercamme">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Valérian Vandercamme - Développeur .NET Full-Stack">
+    <meta property="og:description" content="Développeur qui transforme les idées en solutions. Portfolio de projets .NET/Azure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://valerian-portfolio.com">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Theme -->
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+<body>
+    <!-- Custom Cursor removed -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">VV</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" aria-label="Basculer le thème">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="code-rain"></div>
+            <div class="floating-icons">
+                <i class="fab fa-microsoft"></i>
+                <i class="fab fa-docker"></i>
+                <i class="fas fa-database"></i>
+                <i class="fab fa-react"></i>
+                <i class="fas fa-cloud"></i>
+                <i class="fas fa-code"></i>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Salut, je suis</span>
+                    <span class="name">Valérian Vandercamme</span>
+                    <span class="title-animation">
+                        <span class="typed-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </span>
+                </h1>
+
+                <p class="hero-description">
+                    Développeur <strong>.NET Full-Stack</strong> passionné qui transforme les idées complexes en solutions élégantes.
+                    À 21 ans, j'allie l'esprit entrepreneurial à l'expertise technique pour créer des applications qui font la différence.
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Voir mes projets
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Me contacter
+                    </a>
+                    <a href="/assets/CV_Valerian_Vandercamme.pdf" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-download"></i>
+                        Télécharger CV
+                    </a>
+                </div>
+
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/val%C3%A9rian-vandercamme-72a7681b5/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Valerian5788" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:valerianvdc.pro@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="terminal-title">valerian@portfolio:~$</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command" id="terminal-command"></span>
+                        </div>
+                        <div class="terminal-output" id="terminal-output"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll pour découvrir</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À propos de moi</h2>
+                <p class="section-subtitle">Entrepreneur devenu développeur</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        <strong>Parcours atypique</strong> : De l'entrepreneuriat à la tech, j'ai découvert ma passion
+                        pour le développement en créant mes propres solutions. Autodidacte déterminé,
+                        je transforme cette curiosité en expertise technique solide.
+                    </p>
+
+                    <p>
+                        Spécialisé dans l'écosystème <strong>.NET</strong> et <strong>Azure</strong>,
+                        je conçois des applications web modernes qui allient performance, sécurité et expérience utilisateur.
+                        Mon approche pragmatique me permet de livrer des solutions qui résolvent de vrais problèmes business.
+                    </p>
+
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-rocket"></i>
+                            <span>Solutions innovantes pour des défis réels</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-code"></i>
+                            <span>Code propre et architecture scalable</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-users"></i>
+                            <span>Collaboration et esprit d'équipe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card" data-count="1">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Années d'expérience</div>
+                    </div>
+                    <div class="stat-card" data-count="5">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Projets en production</div>
+                    </div>
+                    <div class="stat-card" data-count="80">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">% de temps gagné clients</div>
+                    </div>
+                    <div class="stat-card" data-count="99">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">% de satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compétences techniques</h2>
+                <p class="section-subtitle">Technologies maîtrisées</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-info">
+                                <i class="fab fa-microsoft"></i>
+                                <span class="skill-name">C# / .NET</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-info">
+                                <i class="fas fa-cloud"></i>
+                                <span class="skill-name">Azure</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-info">
+                                <i class="fas fa-database"></i>
+                                <span class="skill-name">SQL Server</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-info">
+                                <i class="fas fa-server"></i>
+                                <span class="skill-name">Entity Framework</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-info">
+                                <i class="fas fa-fire"></i>
+                                <span class="skill-name">Blazor</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-info">
+                                <i class="fab fa-react"></i>
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-info">
+                                <i class="fab fa-angular"></i>
+                                <span class="skill-name">Angular</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-info">
+                                <i class="fab fa-html5"></i>
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-info">
+                                <i class="fab fa-js"></i>
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Outils & DevOps</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-level="60">
+                            <div class="skill-info">
+                                <i class="fab fa-docker"></i>
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-percentage">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-info">
+                                <i class="fab fa-git-alt"></i>
+                                <span class="skill-name">Git</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="70">
+                            <div class="skill-info">
+                                <i class="fas fa-infinity"></i>
+                                <span class="skill-name">DevOps</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-info">
+                                <i class="fas fa-vial"></i>
+                                <span class="skill-name">Testing</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes projets</h2>
+                <p class="section-subtitle">Solutions développées avec passion</p>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                <button class="filter-btn" data-filter="saas">SaaS</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+                <button class="filter-btn" data-filter="ai">IA/ML</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+
+            <div class="projects-cta">
+                <p>Vous souhaitez voir plus de projets ou collaborer ?</p>
+                <a href="https://github.com/Valerian5788" class="btn btn-outline" target="_blank">
+                    <i class="fab fa-github"></i>
+                    Voir sur GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Parcours professionnel</h2>
+                <p class="section-subtitle">Timeline de mon évolution</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>En recherche de défis à résoudre</h3>
+                        <p class="timeline-company">Recherche d'un premier emploi en entreprise</p>
+                        <p class="timeline-period">Présent</p>
+                        <p class="timeline-description">
+                            À la recherche d'expérience concrète avec des challenges à résoudre pour apprendre énormément dans mon domaine
+                            et éventuellement me spécialiser.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>Tout domaine, flexible</span>
+                            <span>Autodidacte</span>
+                            <span>Motivation, envie de challenges</span>
+                            <span>Envie de me spécialiser</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Développeur .NET Freelance</h3>
+                        <p class="timeline-company">Indépendant</p>
+                        <p class="timeline-period">Novembre 2024 - Juin 2025</p>
+                        <p class="timeline-description">
+                            Développement d'applications web complexes en .NET/Blazor pour diverses entreprises.
+                            Spécialisation dans l'architecture Clean Architecture et l'intégration Azure.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>.NET 8</span>
+                            <span>Blazor</span>
+                            <span>Azure</span>
+                            <span>SQL Server</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2023">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Formation & Découverte du Code</h3>
+                        <p class="timeline-company">Technofutur TIC</p>
+                        <p class="timeline-period">2023 - 2024</p>
+                        <p class="timeline-description">
+                            Recherche de voie avec diverses formations. Découverte du code et formation longue (un an)
+                            chez Technofutur TIC. Beaucoup d'apprentissages autodidactes en parallèle.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>Formation intensive</span>
+                            <span>Autodidacte</span>
+                            <span>Bases programmation</span>
+                            <span>Web Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>CEO Agence Digitale</h3>
+                        <p class="timeline-company">Agence Google Ads</p>
+                        <p class="timeline-period">2020 - 2022</p>
+                        <p class="timeline-description">
+                            Direction d'une agence digitale spécialisée Google Ads.
+                            Gestion quotidienne d'un budget conséquent avec résultats à la clé.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>Google Ads</span>
+                            <span>Management</span>
+                            <span>Business Development</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certifications">
+                <h3>Certifications & Formations</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <i class="fab fa-microsoft"></i>
+                        <span>Azure Fundamentals (AZ-900)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-code"></i>
+                        <span>Technofutur TIC .NET Cloud Azure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Travaillons ensemble</h2>
+                <p class="section-subtitle">Transformons vos idées en réalité</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Prêt pour votre prochain projet ?</h3>
+                    <p>
+                        Que vous soyez une startup qui démarre ou une entreprise établie,
+                        je peux vous aider à concrétiser vos ambitions technologiques.
+                        Discutons de votre vision !
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="label">Email</span>
+                                <a href="mailto:valerianvdc.pro@gmail.com">valerianvdc.pro@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <span class="label">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/val%C3%A9rian-vandercamme-72a7681b5/" target="_blank">Valérian Vandercamme</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <span class="label">GitHub</span>
+                                <a href="https://github.com/Valerian5788" target="_blank">@Valerian5788</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="label">Localisation</span>
+                                <span>Belgique (Remote possible)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="availability">
+                        <div class="status-indicator">
+                            <div class="status-dot"></div>
+                            <span>Disponible pour de nouveaux projets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <h3>Envoyez-moi un message</h3>
+
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Entreprise</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Choisissez un sujet</option>
+                                <option value="freelance">Mission freelance</option>
+                                <option value="cdi">Opportunité CDI</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="question">Question technique</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet ou votre demande..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2024 Valérian Vandercamme. Tous droits réservés.</p>
+                    <p>Conçu et développé avec <i class="fas fa-heart"></i> et beaucoup de café ☕</p>
+                </div>
+
+                <div class="footer-right">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/val%C3%A9rian-vandercamme-72a7681b5/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Valerian5788" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:valerianvdc.pro@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    <i class="fas fa-code"></i>
+                    Développé en HTML/CSS/JS Vanilla •
+                    <i class="fas fa-rocket"></i>
+                    Hébergé sur GitHub Pages •
+                    <i class="fas fa-tachometer-alt"></i>
+                    Optimisé Lighthouse 90+
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content project-modal-content">
+            <div class="modal-header">
+                <h3 id="project-modal-title">Titre du projet</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="project-modal-image">
+                    <img id="project-modal-img" src="" alt="Aperçu du projet">
+                </div>
+
+                <div class="project-modal-info">
+                    <div class="project-modal-meta">
+                        <span class="project-modal-type" id="project-modal-type">Type</span>
+                        <span class="project-modal-status" id="project-modal-status">En production</span>
+                    </div>
+
+                    <div class="project-modal-description" id="project-modal-description">
+                        Description détaillée du projet...
+                    </div>
+
+                    <div class="project-modal-features">
+                        <h4>🎯 Fonctionnalités clés</h4>
+                        <ul id="project-modal-features-list">
+                            <!-- Features will be added dynamically -->
+                        </ul>
+                    </div>
+
+                    <div class="project-modal-tech">
+                        <h4>🛠️ Technologies utilisées</h4>
+                        <div class="project-modal-tech-grid" id="project-modal-tech-grid">
+                            <!-- Tech stack will be added dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="project-modal-metrics">
+                        <h4>📊 Impacts & Métriques</h4>
+                        <div class="metrics-grid" id="project-modal-metrics">
+                            <!-- Metrics will be added dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="project-modal-challenges">
+                        <h4>🚀 Défis techniques relevés</h4>
+                        <div id="project-modal-challenges">
+                            <!-- Challenges will be added dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="project-modal-actions">
+                        <a href="#" id="project-modal-github" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-github"></i> Voir le code
+                        </a>
+                        <a href="#" id="project-modal-demo" class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Démo live
+                        </a>
+                        <button class="btn btn-outline" onclick="shareProject()">
+                            <i class="fas fa-share"></i> Partager
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Easter Egg Modal -->
+    <div id="easter-egg-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🎉 Easter Egg découvert !</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Félicitations ! Vous avez trouvé mon petit secret.</p>
+                <p>En tant que développeur, j'aime cacher des petites surprises dans mes créations.
+                   Cela montre que je porte attention aux détails et que j'aime surprendre les utilisateurs.</p>
+                <div class="easter-egg-content">
+                    <div class="matrix-rain"></div>
+                    <p class="secret-message">
+                        "Le code n'est pas qu'une série d'instructions,<br>
+                        c'est l'art de donner vie aux idées."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+</html>
